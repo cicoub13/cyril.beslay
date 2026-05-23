@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>CV — Cyril</title>
+<meta name="description" content="CV de Cyril : expériences, formation, compétences. Imprimable et téléchargeable en PDF.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="CV — Cyril">
+<meta property="og:description" content="Le parcours sans le jargon corporate.">
+
+<meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0E0D" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F0F0F'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23FFD400'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/print.css" media="print">
+
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('cyril-theme');
+      var prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', stored || prefers);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="wordmark" aria-label="Cyril — accueil">
+      CYRIL<span class="dot" aria-hidden="true"></span>
+    </a>
+    <nav class="navlinks" aria-label="Navigation principale">
+      <a href="projets.html">/projets</a>
+      <a href="cv.html" aria-current="page">/cv</a>
+      <a href="https://fotozik.fr" target="_blank" rel="noopener">fotozik.fr<span class="arr" aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="nav-tools">
+      <button class="theme-toggle" data-theme-toggle aria-label="Changer de thème">
+        <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- En-tête CV -->
+  <section class="cv-head">
+    <div>
+      <p class="eyebrow reveal">
+        <span class="num">03 / 04</span>
+        <span class="line" aria-hidden="true"></span>
+        <span>cv — màj juin 2026</span>
+      </p>
+      <h1 class="reveal" data-delay="1">Cyril Martin.</h1>
+      <p class="sub reveal" data-delay="2">
+        Développeur, blogueur, coureur. Quinze ans à coder pour vivre,
+        à courir pour souffler, et à écrire pour comprendre.
+      </p>
+    </div>
+    <div class="actions reveal" data-delay="3">
+      <button class="btn btn-accent no-print" data-print>
+        Télécharger en PDF <span class="arr" aria-hidden="true">↓</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Expériences -->
+  <section class="cv-block">
+    <h2>— Expériences</h2>
+    <div class="cv-entries">
+
+      <article class="cv-entry">
+        <div class="top">
+          <h3 class="role">Lead Developer <span class="at">· Studio &lt;placeholder&gt;</span></h3>
+          <span class="when">2022 → présent</span>
+        </div>
+        <p class="desc">
+          Direction technique d'une équipe de 6 dev. Architecture, code review,
+          ownership produit. On fait des outils internes pour des PME — du SaaS
+          qui n'a pas honte d'être lent à monter en charge.
+        </p>
+        <div class="tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Postgres</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Mentorat</span>
+        </div>
+      </article>
+
+      <article class="cv-entry">
+        <div class="top">
+          <h3 class="role">Développeur senior <span class="at">· Agence &lt;placeholder&gt;</span></h3>
+          <span class="when">2018 → 2022</span>
+        </div>
+        <p class="desc">
+          Tech lead sur des refontes e-commerce et SaaS B2B. Le quotidien :
+          mettre du sens dans des migrations qui n'en avaient pas, et défendre
+          le temps des dev face aux deadlines magiques.
+        </p>
+        <div class="tags">
+          <span class="tag">Node</span>
+          <span class="tag">React</span>
+          <span class="tag">Shopify</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </article>
+
+      <article class="cv-entry">
+        <div class="top">
+          <h3 class="role">Développeur fullstack <span class="at">· Startup &lt;placeholder&gt;</span></h3>
+          <span class="when">2014 → 2018</span>
+        </div>
+        <p class="desc">
+          Première vraie startup. J'ai codé un peu de tout, cassé encore plus,
+          appris à prendre des décisions techniques sans avoir le luxe de douter
+          trois semaines.
+        </p>
+        <div class="tags">
+          <span class="tag">Ruby on Rails</span>
+          <span class="tag">Vue.js</span>
+          <span class="tag">Heroku</span>
+        </div>
+      </article>
+
+      <article class="cv-entry">
+        <div class="top">
+          <h3 class="role">Développeur web <span class="at">· Freelance</span></h3>
+          <span class="when">2011 → 2014</span>
+        </div>
+        <p class="desc">
+          Sites WordPress, sites vitrines, e-commerce Prestashop. Le terrain
+          d'apprentissage le plus dur et le plus formateur.
+        </p>
+        <div class="tags">
+          <span class="tag">PHP</span>
+          <span class="tag">jQuery</span>
+          <span class="tag">SCSS</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Formation -->
+  <section class="cv-block">
+    <h2>— Formation</h2>
+    <div class="cv-entries">
+
+      <article class="cv-entry">
+        <div class="top">
+          <h3 class="role">Master Informatique <span class="at">· Université &lt;placeholder&gt;</span></h3>
+          <span class="when">2009 → 2011</span>
+        </div>
+        <p class="desc">Spécialisation systèmes répartis et génie logiciel.</p>
+      </article>
+
+      <article class="cv-entry">
+        <div class="top">
+          <h3 class="role">Licence Informatique <span class="at">· Université &lt;placeholder&gt;</span></h3>
+          <span class="when">2006 → 2009</span>
+        </div>
+        <p class="desc">Tronc commun. Premier mémoire sur les systèmes distribués.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Compétences -->
+  <section class="cv-block">
+    <h2>— Compétences</h2>
+    <div class="skills-cols">
+      <div>
+        <h3>Langages</h3>
+        <ul>
+          <li>TypeScript / JavaScript</li>
+          <li>Swift / SwiftUI</li>
+          <li>Python (scripts, data)</li>
+          <li>Go (curieux, pas pro)</li>
+          <li>SQL (Postgres surtout)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Stack web</h3>
+        <ul>
+          <li>Next.js / Astro / React</li>
+          <li>Node / Bun / Deno</li>
+          <li>Tailwind / CSS moderne</li>
+          <li>tRPC / GraphQL</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Infra & data</h3>
+        <ul>
+          <li>Postgres, SQLite, Redis</li>
+          <li>Docker, systemd</li>
+          <li>AWS (ECS, RDS, S3)</li>
+          <li>Hetzner, Cloudflare</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Homelab & IoT</h3>
+        <ul>
+          <li>Home Assistant, ESPHome</li>
+          <li>Zigbee2MQTT, Node-RED</li>
+          <li>Proxmox, NAS, VPN</li>
+          <li>Wireguard / Tailscale</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Centres d'intérêt -->
+  <section class="cv-block">
+    <h2>— Hors écran</h2>
+    <div class="cv-entries">
+      <article class="cv-entry">
+        <p class="desc">
+          Trail et ultra (j'ambitionne un UTMB sans y croire trop).
+          Vélo de route et gravel autour de Toulouse, triathlon longue distance
+          (un IM par an, c'est la limite). Photographie argentique le week-end,
+          podcasts longs en courant. Père de deux petits humains.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="cv-block">
+    <h2>— Contact</h2>
+    <div class="cv-entries">
+      <article class="cv-entry">
+        <div class="top">
+          <h3 class="role">Pour discuter <span class="at">· Toulouse, France</span></h3>
+        </div>
+        <nav class="proj-links no-print" style="margin-top:var(--sp-4)" aria-label="Liens de contact">
+          <a href="mailto:hello@example.com">hello@&lt;domaine&gt;.fr <span class="arr" aria-hidden="true">↗</span></a>
+          <a href="https://github.com/" target="_blank" rel="noopener">GitHub <span class="arr" aria-hidden="true">↗</span></a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn <span class="arr" aria-hidden="true">↗</span></a>
+          <a href="https://x.com/" target="_blank" rel="noopener">X <span class="arr" aria-hidden="true">↗</span></a>
+        </nav>
+        <p class="desc" style="display:none">Visible à l'impression uniquement.</p>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div>Toulouse · <span data-year>2026</span></div>
+    <nav class="foot-socials" aria-label="Réseaux et flux">
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://fotozik.fr/rss" target="_blank" rel="noopener">RSS</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Maison Zigbee — Cyril</title>
+<meta name="description" content="Une centaine de capteurs, zéro cloud, tout passe par Home Assistant.">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Maison Zigbee — Cyril">
+<meta property="og:description" content="Une centaine de capteurs, zéro cloud, tout passe par Home Assistant.">
+
+<meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0E0D" media="(prefers-color-scheme: dark)">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F0F0F'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23FFD400'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/print.css" media="print">
+
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('cyril-theme');
+      var prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', stored || prefers);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="wordmark" aria-label="Cyril — accueil">
+      CYRIL<span class="dot" aria-hidden="true"></span>
+    </a>
+    <nav class="navlinks" aria-label="Navigation principale">
+      <a href="../projets.html" aria-current="page">/projets</a>
+      <a href="../cv.html">/cv</a>
+      <a href="https://fotozik.fr" target="_blank" rel="noopener">fotozik.fr<span class="arr" aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="nav-tools">
+      <button class="theme-toggle" data-theme-toggle aria-label="Changer de thème">
+        <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero projet -->
+  <section class="proj-hero">
+    <a class="back" href="../projets.html"><span aria-hidden="true">←</span> retour aux projets</a>
+
+    <div class="meta-row">
+      <span class="tag tag-status-active">Actif</span>
+      <span class="tag">04 / 06</span>
+      <span class="tag">Homelab</span>
+      <span class="tag">2022 → ongoing</span>
+    </div>
+
+    <h1 class="reveal">Maison Zigbee.</h1>
+    <p class="tagline reveal" data-delay="1">
+      Une centaine de capteurs et d'actionneurs, zéro cloud, tout passe par Home Assistant. Câblé, documenté, sauvegardé, indépendant des serveurs des constructeurs.
+    </p>
+
+    <div class="proj-stack reveal" data-delay="2" aria-label="Stack technique">
+      <span class="tag">Home Assistant</span>
+      <span class="tag">Zigbee2MQTT</span>
+      <span class="tag">Mosquitto</span>
+      <span class="tag">Node-RED</span>
+      <span class="tag">ESPHome</span>
+      <span class="tag">Coordinateur SLZB-06</span>
+    </div>
+
+    <!-- Placeholder capture -->
+    <figure class="proj-shot reveal" data-delay="3" style="margin-top:clamp(40px, 5vw, 64px)" aria-label="Aperçu du projet Maison Zigbee">
+      <span class="lbl">CAPTURE — zigbee-house</span>
+    </figure>
+  </section>
+
+  <!-- Contexte -->
+  <section class="proj-block">
+    <div class="label">— Contexte</div>
+    <div class="content reveal">
+      <p>Acheter une ampoule connectée en 2024 c'est accepter qu'elle ne fonctionne plus quand le constructeur ferme son cloud. J'ai donc construit ma maison sur Zigbee, avec un coordinateur indépendant et zéro dépendance externe.</p>
+      <p>Aujourd'hui, ~120 devices tournent en local — éclairage, volets, capteurs de présence, qualité d'air, énergie, sondes de température, multi-prises. Une coupure d'internet ne change rien à la maison.</p>
+    </div>
+  </section>
+
+  <!-- Approche -->
+  <section class="proj-block">
+    <div class="label">— Approche</div>
+    <div class="content reveal">
+      <p>Le système est divisé en zones logiques (jour, nuit, extérieur, garage) avec un coordinateur Ethernet POE dans le faux-plafond du couloir, à équidistance des trois étages.</p>
+      <p>Toutes les automations critiques (sécurité, alarmes, présence) tournent sur Home Assistant. Le confort (scènes, transitions douces) passe par Node-RED, plus visuel à déboguer.</p>
+      <ul>
+        <li>Bridge Zigbee → MQTT → Home Assistant, jamais directement</li>
+        <li>Backups automatiques journaliers sur le NAS, snapshot + DB séparés</li>
+        <li>Carte de la maison faite à la main en SVG, intégrée au dashboard</li>
+        <li>Capteurs DIY ESPHome pour l'humidité de la salle de bain et la VMC</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Lessons learned -->
+  <section class="proj-block">
+    <div class="label">— Lessons learned</div>
+    <div class="content reveal">
+      <p>Le coordinateur, c'est 50% du job. Un mauvais dongle USB et c'est l'enfer du déclassement à vie. Passer en POE Ethernet a tout changé.</p>
+      <p>Documenter ce qu'on fait sur fotozik.fr m'a forcé à standardiser. Sans le blog, le système serait deux fois plus fragile.</p>
+    </div>
+  </section>
+
+  <!-- Liens externes -->
+  <section class="proj-block">
+    <div class="label">— Liens</div>
+    <div class="content">
+      <nav class="proj-links" aria-label="Liens du projet">
+        <a href="https://fotozik.fr" target="_blank" rel="noopener">
+          Articles fotozik.fr <span class="arr" aria-hidden="true">↗</span>
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noopener">
+          Repo configs HA <span class="arr" aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Nav projet -->
+  <nav class="proj-nav" aria-label="Navigation entre projets">
+    <a href="parents-ios.html">
+      <span class="dir"><span aria-hidden="true">←</span> projet précédent</span>
+      <span class="title">Une app pour parents</span>
+    </a>
+    <a href="fotozik.html">
+      <span class="dir">projet suivant <span aria-hidden="true">→</span></span>
+      <span class="title">Fotozik</span>
+    </a>
+  </nav>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div>Toulouse · <span data-year>2026</span></div>
+    <nav class="foot-socials" aria-label="Réseaux et flux">
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://fotozik.fr/rss" target="_blank" rel="noopener">RSS</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Cyril — Père, coureur, bidouilleur, blogueur</title>
+<meta name="description" content="Site personnel de Cyril : projets perso, CV, et lien vers le blog fotozik.fr. Trail, code, homelab, side projects.">
+<meta name="author" content="Cyril">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cyril — Père, coureur, bidouilleur, blogueur">
+<meta property="og:description" content="Site personnel de Cyril : projets perso, CV, et lien vers le blog fotozik.fr.">
+<meta property="og:locale" content="fr_FR">
+
+<!-- Theme color (s'adapte au mode du navigateur) -->
+<meta name="theme-color" content="#FAFAF7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E0E0D" media="(prefers-color-scheme: dark)">
+
+<!-- Favicon SVG : point jaune sur fond -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230F0F0F'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23FFD400'/%3E%3C/svg%3E">
+
+<!-- Polices Google Fonts : Space Grotesk + JetBrains Mono -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/print.css" media="print">
+
+<!-- Anti-flash : applique le thème stocké avant le paint -->
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem('cyril-theme');
+      var prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', stored || prefers);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Aller au contenu</a>
+
+<!-- ====================================================================
+     NAV
+     ==================================================================== -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="wordmark" aria-label="Cyril — accueil">
+      CYRIL<span class="dot" aria-hidden="true"></span>
+    </a>
+
+    <nav class="navlinks" aria-label="Navigation principale">
+      <a href="projets.html">/projets</a>
+      <a href="cv.html">/cv</a>
+      <a href="https://fotozik.fr" target="_blank" rel="noopener">fotozik.fr<span class="arr" aria-hidden="true">↗</span></a>
+    </nav>
+
+    <div class="nav-tools">
+      <button class="theme-toggle" data-theme-toggle aria-label="Changer de thème">
+        <!-- Icône lune (visible en mode clair) -->
+        <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <!-- Icône soleil (visible en mode sombre) -->
+        <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====================================================================
+     MAIN
+     ==================================================================== -->
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-left">
+
+      <p class="eyebrow reveal">
+        <span class="num">01 / 04</span>
+        <span class="line" aria-hidden="true"></span>
+        <span>index</span>
+      </p>
+
+      <h1 id="hero-title" class="display reveal" data-delay="1">
+        Cyril<br>
+        <em>Martin.</em>
+      </h1>
+
+      <p class="keywords reveal" data-delay="2" aria-label="Quatre mots pour me résumer">
+        <span>Père</span>
+        <span class="sep" aria-hidden="true"></span>
+        <span>Coureur</span>
+        <span class="sep" aria-hidden="true"></span>
+        <span>Bidouilleur</span>
+        <span class="sep" aria-hidden="true"></span>
+        <span>Blogueur</span>
+      </p>
+
+      <p class="bio reveal" data-delay="3">
+        Quelque part entre deux séances de trail et un week-end à recâbler le
+        homelab, j'écris du code, je tiens le blog <strong>fotozik.fr</strong> et
+        je bidouille des side projects qui n'ont rien à voir entre eux.
+        Toulouse, France.
+      </p>
+
+    </div>
+
+    <aside class="hero-right reveal" data-delay="2" aria-label="Visuel hero">
+      <span class="hero-corner-mark mono" aria-hidden="true">[ portrait — 1 / 1 ]</span>
+      <div class="hero-visual">
+        <div class="hero-blob" aria-hidden="true"></div>
+        <div class="hero-portrait" aria-hidden="true">
+          <span class="lbl">PORTRAIT</span>
+        </div>
+        <span class="hero-vert" aria-hidden="true">// à venir — photo perso</span>
+      </div>
+    </aside>
+  </section>
+
+  <!-- SECTIONS — ce qu'on trouve ici -->
+  <section class="section" aria-labelledby="sections-title">
+    <div class="section-head">
+      <p class="eyebrow reveal">
+        <span class="num">— index</span>
+        <span class="line" aria-hidden="true"></span>
+      </p>
+      <h2 id="sections-title" class="sr-only">Ce qu'on trouve ici</h2>
+    </div>
+
+    <div class="sec-list">
+      <a class="sec-item reveal" data-delay="1" href="projets.html">
+        <span class="num mono">02 / projets</span>
+        <span class="title">Projets</span>
+        <span class="desc">Fotozik, OpenClaw, une app iOS pour parents, un setup Zigbee qui dépasse l'entendement.</span>
+        <span class="arr" aria-hidden="true">→</span>
+      </a>
+      <a class="sec-item reveal" data-delay="2" href="cv.html">
+        <span class="num mono">03 / cv</span>
+        <span class="title">CV</span>
+        <span class="desc">Le parcours sans le jargon corporate. Imprimable, téléchargeable, à jour.</span>
+        <span class="arr" aria-hidden="true">→</span>
+      </a>
+      <a class="sec-item reveal" data-delay="3" href="https://fotozik.fr" target="_blank" rel="noopener">
+        <span class="num mono">04 / blog</span>
+        <span class="title">fotozik.fr</span>
+        <span class="desc">Mon blog tech, lifestyle et endurance. Tout ce qui ne tient pas ici.</span>
+        <span class="arr" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ====================================================================
+     FOOTER
+     ==================================================================== -->
+<footer class="foot">
+  <div class="foot-inner">
+    <div>Toulouse · <span data-year>2026</span></div>
+    <nav class="foot-socials" aria-label="Réseaux et flux">
+      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://fotozik.fr/rss" target="_blank" rel="noopener">RSS</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
